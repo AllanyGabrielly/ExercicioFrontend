@@ -1,6 +1,6 @@
 // Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', function() {
-    // Consulta DOM para obter elementos
+    // Consulta DOM
     const numero1Input = document.getElementById('numero1');
     const numero2Input = document.getElementById('numero2');
     const operacaoSelect = document.getElementById('operacao');
@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adiciona evento de click ao botão calcular
     calcularBtn.addEventListener('click', function() {
-        // Obtém valores dos inputs (convertendo para Number)
+        // Convertendo para Number
         const num1 = Number(numero1Input.value);
         const num2 = Number(numero2Input.value);
         const operacao = operacaoSelect.value;
         
         let resultado;
 
-        // Switch para verificar a operação selecionada
+        // Switch para verificar a operação
         switch(operacao) {
             case 'adicao':
                 resultado = num1 + num2;
@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultado = Math.pow(num1, num2);
                 break;
             case 'raiz':
-                // Usa Math.sqrt para raiz quadrada (usa apenas o primeiro número)
+                // Usa Math.sqrt para raiz quadrada (usa só o primeiro número)
                 resultado = Math.sqrt(num1);
                 break;
             default:
                 resultado = 'Operação inválida';
         }
 
-        // CORREÇÃO: Forma correta de usar template string
+        // Atualiza o conteúdo da div
         resultadoDiv.textContent = 'Resultado: ' + resultado;
     });
 });
