@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Adiciona evento de clique no botão Remover
         const btnRemover = novaTarefa.querySelector('.btnRemover');
         btnRemover.addEventListener('click', function() {
-            // Remove o elemento <li> pai do botão clicado
+            // Remove o elemento <li> do botão clicado
             novaTarefa.remove();
         });
     }
