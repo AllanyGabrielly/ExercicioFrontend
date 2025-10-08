@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Valida se é possível sortear a quantidade solicitada sem repetição
         if (quantidade > intervalo) {
-            window.alert(`Não é possível sortear ${quantidade} números sem repetição no intervalo de ${minimo} a ${maximo} (apenas ${intervalo} números disponíveis)!`);
+            window.alert(`Não é possível sortear essa quantidade`);
             return;
         }
         
